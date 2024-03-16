@@ -6,9 +6,9 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://YOUR AWS EC2 SERVER URL:3306/myDB?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
-		<property name="hibernate.connection.username">YOUR REMOTE MYSQL USER ID</property>
-		<property name="hibernate.connection.password">YOUR REMOTE MYSQL USER PASSWORD</property>
+		<property name="hibernate.connection.url">jdbc:mysql://ec2-3-136-97-178.us-east-2.compute.amazonaws.com:3306/myDB?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+		<property name="hibernate.connection.username">newmysqlremoteuser</property>
+		<property name="hibernate.connection.password">bigpassword</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
 		<property name="show_sql">false</property>
 		<mapping class="datamodel.Employee" />

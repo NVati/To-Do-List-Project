@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/MyServletDB")
 public class MyServletDB extends HttpServlet {
    private static final long serialVersionUID = 1L;
-   static String url = "jdbc:mysql://YOUR AWS EC2 SERVER URL:3306/YOUR MYSQL DB INSTANCE NAME" + "?useSSL=false";
-   static String user = "YOUR REMOTE MYSQL USER ID";
-   static String password = "YOUR REMOTE MYSQL USER PASSWORD";
+   static String url = "jdbc:mysql://ec2-3-136-97-178.us-east-2.compute.amazonaws.com/myDB" + "?useSSL=false";
+   static String user = "newmysqlremoteuser";
+   static String password = "bigpassword";
    static Connection connection = null;
 
    public MyServletDB() {
