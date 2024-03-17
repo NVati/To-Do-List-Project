@@ -46,7 +46,8 @@ public class MyServletHibernateDB extends HttpServlet {
                + employee.getName() + ", " //
                + employee.getAge());
 
-         out.println("<li>" + employee.getId() + ", " //
+         //out.println("<li>" + employee.getId() + ", " //
+         out.println("<li>"  //
                + employee.getName() + ", " //
                + employee.getAge() + "</li>");
       }
