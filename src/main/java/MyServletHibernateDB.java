@@ -23,15 +23,15 @@ public class MyServletHibernateDB extends HttpServlet {
       response.setContentType("text/html");
 
       // #1
-      UtilDB.createEmployees("user3", "33");
-      UtilDB.createEmployees("user4", "44");
+      //UtilDB.createEmployees("user3", "33");
+      //UtilDB.createEmployees("user4", "44");
       
       // #2
       retrieveDisplayData(response.getWriter());
    }
 
    void retrieveDisplayData(PrintWriter out) {
-      String title = "Database Result";
+      String title = "To Dos";
       String docType = "<!doctype html public \"-//w3c//dtd html 4.0 " + //
             "transitional//en\">\n"; //
       out.println(docType + //
@@ -52,6 +52,9 @@ public class MyServletHibernateDB extends HttpServlet {
       }
       out.println("</ul>");
       out.println("</body></html>");
+      //Adding a reference link to insert.
+      out.println("<a href=\'/webproject-orm/simpleInsertHB.html\'>Insert</a>");
+      out.println("<a href=\'/webproject-orm/simpleSearchHB.html\'>Search</a>");
    }
 
    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

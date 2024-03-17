@@ -27,20 +27,20 @@ public class Employee {
    private String name;
 
    @Column(name = "age")
-   private Integer age;
+   private String age;
 
    public Employee() {
    }
 
-   public Employee(Integer id, String name, Integer age) {
+   public Employee(Integer id, String name, String age) {
       this.id = id;
       this.name = name;
       this.age = age;
    }
 
-   public Employee(String name, int age) {
+   public Employee(String name, String age2) {
       this.name = name;
-      this.age = age;
+      this.age = age2;
    }
 
    public Integer getId() {
@@ -59,11 +59,11 @@ public class Employee {
       this.name = name;
    }
 
-   public Integer getAge() {
+   public String getAge() {
       return age;
    }
 
-   public void setAge(Integer age) {
+   public void setAge(String age) {
       this.age = age;
    }
 

@@ -87,7 +87,8 @@ public class UtilDB {
       Transaction tx = null;
       try {
          tx = session.beginTransaction();
-         session.save(new Employee(userName, Integer.valueOf(age)));
+         //session.save(new Employee(userName, Integer.valueOf(age)));
+         session.save(new Employee(userName, age));
          tx.commit();
       } catch (HibernateException e) {
          if (tx != null)
