@@ -5,7 +5,7 @@ header {
     background-color:black;
     color:white;
     text-align:center;
-    padding:5px;	 
+    padding:5px;    
 }
 nav {
     line-height:30px;
@@ -13,43 +13,44 @@ nav {
     height:300px;
     width:100px;
     float:left;
-    padding:5px;	      
+    padding:5px;        
 }
 section {
     width:350px;
     float:left;
-    padding:10px;	 	 
+    padding:10px;        
 }
 footer {
     background-color:black;
     color:white;
     clear:both;
     text-align:center;
-    padding:5px;	 	 
+    padding:5px;        
 }
 </style>
 </head>
 
 <body>
 <header>
-<h1> To-Do List (Search To-Do) </h1>
+<h1> To-Do List (Delete To-Do) </h1>
 </header>
 
 <nav>
 <a href="/webproject-orm/simpleInsertHB.html">Insert Data</a> <br>
-<a href="/webproject-orm/Delete.html">Delete Data</a> <br>
+<a href="/webproject-orm/simpleSearchHB.html">Search Data</a> <br>
 <a href="/webproject-orm/MyServletHibernateDB">Show To Dos</a> <br>
 </nav>
 
 <section>
-	<h1>User Input</h1>
-	
-	<form action="SimpleSearchHB" method="POST">
-	
-		To-Do: <input type="text" name="keyword"> <br />
-		
-		<input type="submit" value="Search" />
-	</form>
+    <h1>User Input</h1>
+   
+    <form action="DeleteEmployeeServlet" method="POST">
+   
+        To-Do: <input type="text" name="name"> <br />
+        Date: <input type="text" name="age"> <br />
+       
+        <input type="submit" value="Delete" />
+    </form>
 
 </section>
 

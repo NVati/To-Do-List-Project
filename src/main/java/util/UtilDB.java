@@ -9,10 +9,11 @@ import java.util.Iterator;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
-
+import org.hibernate.SQLQuery;
 import datamodel.Employee;
 
 import org.hibernate.HibernateException;
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -98,4 +99,41 @@ public class UtilDB {
          session.close();
       }
    }
+   //Added a method to delete.
+   
+
+   public static void deleteEmployees(String name, String age) {
+      Session session = getSessionFactory().openSession();
+      Transaction tx = null;
+      try {
+         tx = session.beginTransaction();
+        
+         // Create SQL delete statement
+         String sql = "DELETE FROM employee WHERE name = :name AND age = :age";
+        
+         // Create SQLQuery object
+         SQLQuery query = session.createSQLQuery(sql);
+        
+         // Set parameters
+         query.setParameter("name", name);
+         query.setParameter("age", age);
+        
+         // Execute the delete statement
+         int rowCount = query.executeUpdate();
+        
+         // Commit transaction
+         tx.commit();
+        
+         // Provide feedback
+         System.out.println(rowCount + " employee(s) deleted with name " + name + " and age " + age);
+      } catch (HibernateException e) {
+         if (tx != null)
+            tx.rollback();
+         e.printStackTrace();
+      } finally {
+         session.close();
+      }
+   }
+
+   //End
 }
