@@ -6,7 +6,7 @@
 	<session-factory>
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-		<property name="hibernate.connection.url">jdbc:mysql://ec2-3-136-97-178.us-east-2.compute.amazonaws.com:3306/myDB?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
+		<property name="hibernate.connection.url">jdbc:mysql://ec2-3-145-217-195.us-east-2.compute.amazonaws.com:3306/myDB?useSSL=false&amp;allowPublicKeyRetrieval=true</property>
 		<property name="hibernate.connection.username">newmysqlremoteuser</property>
 		<property name="hibernate.connection.password">bigpassword</property>
 		<property name="hibernate.hbm2ddl.auto">update</property>
